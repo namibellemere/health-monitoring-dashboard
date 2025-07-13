@@ -1,0 +1,200 @@
+/* Health Monitoring Dashboard Styles */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(135deg, #007bff, #0056b3) !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Health Cards */
+.health-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 140px;
+}
+
+.health-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.heart-rate-card {
+    border-left: 4px solid #dc3545;
+}
+
+.spo2-card {
+    border-left: 4px solid #007bff;
+}
+
+.current-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: #2c3e50;
+}
+
+.card-title {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+/* Status Indicators */
+.status-indicator {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pulse-animation {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    animation: pulse 1s ease-in-out infinite;
+}
+
+.pulse-normal {
+    background-color: #28a745;
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+}
+
+.pulse-low {
+    background-color: #ffc107;
+    box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7);
+}
+
+.pulse-high {
+    background-color: #dc3545;
+    box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+    }
+}
+
+/* Chart container */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    border-bottom: 1px solid #dee2e6;
+    border-radius: 12px 12px 0 0 !important;
+}
+
+#chartContainer {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#healthChart {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: none;
+}
+
+.loading-spinner {
+    color: #6c757d;
+}
+
+.loading-spinner i {
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+/* Status badge */
+.status-badge .badge {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 20px;
+}
+
+.status-badge .fa-circle {
+    font-size: 0.5rem;
+    animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Footer */
+footer {
+    background-color: #ffffff;
+    border-top: 1px solid #dee2e6 !important;
+    margin-top: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .current-value {
+        font-size: 2rem;
+    }
+    
+    .health-card {
+        height: auto;
+        margin-bottom: 1rem;
+    }
+    
+    #chartContainer {
+        min-height: 300px;
+    }
+}
+
+/* Medical-grade professional styling */
+.text-medical {
+    color: #2c3e50;
+}
+
+.bg-medical {
+    background-color: #f8f9fa;
+}
+
+/* Smooth transitions */
+* {
+    transition: all 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
