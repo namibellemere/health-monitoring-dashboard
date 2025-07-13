@@ -1,4 +1,4 @@
-# health-monitoring-dashboard
+
 # Health Monitoring Dashboard
 
 A real-time health monitoring dashboard that simulates and visualizes vital signs data including heart rate and SpO₂ (blood oxygen saturation) levels. Built with Python Flask backend and responsive web interface.
